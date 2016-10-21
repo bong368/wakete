@@ -16,14 +16,14 @@
 					<div class="col-xs-12">
 						<?php foreach ($games as $key => $game): ?>
 							<div class="col-md-3 col-xs-12" class="bordered" style="margin-bottom: 30px; min-height: 300px;">
-								<a href="{{ url('/catalog/games') }}/{{ $game['ruta'] }}" class="bordered" target="_blank">
+								<a href="{{ url('/catalog/games') }}/{{ $game['ruta'] }}" class="bordered tracking-btn" data-action="games" data-id="<?php echo base64_encode($game['_id']) ?>" target="_blank">
 									<div class="col-xs-12" style="background-image: url('<?php echo asset("games/".$game['ruta']."/".$game['ruta'].".png") ?>'); background-size: cover; height: 200px; background-position: center;">
 									</div>
 								</a>	
 								<div class="col-xs-12 common-height" style="padding: 0">
 									<div class="col-md-8">
 										<h3 style="padding:10px 0;">
-											<a href="{{ url('/catalog/games') }}/{{ $game['ruta'] }}" target="_blank">
+											<a href="{{ url('/catalog/games') }}/{{ $game['ruta'] }}" target="_blank" class="tracking-btn" data-action="games" data-id="<?php echo base64_encode($game['_id']) ?>"> 
 											<?php if (isset($game['nombre'])): ?>
 												<?php echo $game['nombre'] ?>
 											<?php else: ?>
@@ -33,7 +33,7 @@
 										</h3>
 									</div>
 									<div class="col-md-4">
-										<a href="{{ url('/catalog/games') }}/{{ $game['ruta'] }}" class="button button-rounded button-reveal button-medium button-red tright" target="_blank">
+										<a href="{{ url('/catalog/games') }}/{{ $game['ruta'] }}" class="button button-rounded button-reveal button-medium button-red tright tracking-btn" target="_blank"  data-action="games" data-id="<?php echo base64_encode($game['_id']) ?>">
 											<i class="icon-play"></i> <span>Jugar</span>
 										</a>
 									</div>

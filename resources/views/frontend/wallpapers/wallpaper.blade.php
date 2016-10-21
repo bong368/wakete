@@ -16,7 +16,7 @@
 					<div class="col-xs-12" style="margin-bottom: 40px;">
 						<?php foreach ($wallpapers[$category] as $key => $wallpaper): ?>
 							<div class="col-md-3 col-xs-12 text-center" class="bordered" style="margin-bottom: 30px;">
-								<a href="<?php echo asset('/wallpapers/'.$category.'/'.$wallpaper->getFilename()) ?>" download="<?php echo asset('/wallpapers/'.$category.'/'.$wallpaper->getFilename()) ?>">
+								<a href="<?php echo asset('/wallpapers/'.$category.'/'.$wallpaper->getFilename()) ?>" download="<?php echo asset('/wallpapers/'.$category.'/'.$wallpaper->getFilename()) ?>" class="tracking-btn" data-action="wallpapers" data-id="<?php echo base64_encode($wallpaper->getFilename()) ?>">
 									<img src="<?php echo asset('/wallpapers/'.$category.'/'.$wallpaper->getFilename()) ?>" class="img-responsive" style="height: 270px; margin: 0 auto;" align="middle">
 								</a>
 							</div>

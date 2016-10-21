@@ -11,7 +11,7 @@
 						<h2>Partidos en directo</h2>
 					</div>
 					@foreach ($matchs as $match)
-						<a href="{{ url('/catalog/match') }}/{{ $match->id }}" class="bordered">
+						<a href="{{ url('/catalog/match') }}/{{ $match->id }}" class="bordered tracking-btn" data-action="football" data-id="<?php echo base64_encode($match->id) ?>">
 							
 							<div class="col-md-3 col-xs-12" style="min-height: 280px;padding-top: 40px; margin-bottom: 20px;">
 								<div class="row">
@@ -76,7 +76,7 @@
 					</div>
 					<div class="row">
 						@foreach ($matchsDay->matches as $matchDay)
-							<a href="{{ url('/catalog/match') }}/{{ $matchDay->id }}" class="bordered">
+							<a href="{{ url('/catalog/match') }}/{{ $matchDay->id }}" class="bordered tracking-btn" data-action="football" data-id="<?php echo base64_encode($matchDay->id) ?>">
 								<div class="col-md-3 col-xs-12" style="min-height: 280px;vertical-align:middle">	
 									<div class="row">
 										<div class="col-xs-6 text-center">

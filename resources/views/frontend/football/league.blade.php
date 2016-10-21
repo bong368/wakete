@@ -30,7 +30,7 @@
 				</div>
 				<div class="col-xs-12">
 					@foreach ($matchs as $match)
-						<a href="{{ url('/catalog/match') }}/{{ $match->id }}" class="bordered">
+						<a href="{{ url('/catalog/match') }}/{{ $match->id }}" class="bordered tracking-btn" data-action="football" data-id="<?php echo base64_encode($match->id) ?>">
 							<div class="col-md-3 col-xs-12" style="min-height: 280px;vertical-align:middle">	
 								<div class="row">
 									<div class="col-xs-6 text-center">

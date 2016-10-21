@@ -48,16 +48,16 @@
 									?>
 									<article class="portfolio-item pf-graphics pf-media <?php echo $cats ?>">
 										<div class="portfolio-image">
-											<a href="#" class="play-single-song center-icon" data-name="<?php echo str_replace(' ', '-', $song['track_title']) ?>" >
-												<img src="<?php echo $song['track_image_file'] ?>" alt="$song['track_title']">
+											<a href="#" class="play-single-song center-icon tracking-btn" data-name="<?php echo str_replace(' ', '-', $song['track_title']) ?>" data-action="music" data-id="<?php echo base64_encode($song['_id']) ?>">
+												<img src="<?php echo $song['track_image_file'] ?>" alt="<?php echo $song['track_title'] ?>">
 											</a>
 											<div class="portfolio-overlay">
-												<a href="#" class="play-single-song center-icon" data-name="<?php echo str_replace(' ', '-', $song['track_title']) ?>" ><i class="icon-line-play i-xlarge"></i></a>
+												<a href="#" class="play-single-song center-icon tracking-btn" data-name="<?php echo str_replace(' ', '-', $song['track_title']) ?>" data-action="music" data-id="<?php echo base64_encode($song['_id']) ?>" ><i class="icon-line-play i-xlarge"></i></a>
 											</div>
 										</div>
 										<div class="portfolio-desc">
 											<h3>
-												<a href="#" class="play-single-song" data-name="<?php echo str_replace(' ', '-', $song['track_title']) ?>">
+												<a href="#" class="play-single-song tracking-btn" data-name="<?php echo str_replace(' ', '-', $song['track_title']) ?>" data-action="music" data-id="<?php echo base64_encode($song['_id']) ?>">
 													<?php echo $song['track_title'] ?>	
 												</a>
 											</h3>

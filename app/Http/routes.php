@@ -56,7 +56,7 @@ Route::get('/catalog/wallpapers/{wallpaper}', 'WallpapersController@wallpapers')
 
 //Music routes
 Route::get('/catalog/music', 'MusicController@index');
-Route::get('/catalog/music/{name_track}', 'MusicController@film');
+Route::get('/catalog/music/{name_track}', 'MusicController@track');
 
 //Film routes
 Route::get('/catalog/film', 'FilmController@index');
@@ -65,6 +65,13 @@ Route::get('/catalog/film/{name_film}', 'FilmController@film');
 //Games routes
 Route::get('/catalog/games', 'GamesController@index');
 Route::get('/catalog/games/{uri_game}', 'GamesController@game');
+
+
+//Tracking  route
+Route::get('/tracking/{platform}/{action}/{id_content}', 'TrackingServicesController@tracking');
+
+
+
 
 // ADMIN GROUP  routes
 Route::get('/admin', 'AdminController\BackendController@login');

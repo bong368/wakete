@@ -18,7 +18,7 @@
 							<?php $i = $key + 1; ?>
 							<div class="col-md-3 col-sm-6 clearfix" style="margin-bottom: 20px;">
 								<div class="entry-image">
-									<a href="{{ url('catalog/article') }}/<?php echo $post['uri'] ?>">
+									<a href="{{ url('catalog/article') }}/<?php echo $post['uri'] ?>" class="tracking-btn" data-action="posts" data-id="<?php echo base64_encode($post['_id']) ?>">
 										
 										<div class="col-xs-12" style="min-height: 250px; background-image: url('<?php echo $post['img_post'] ?>'); background-size: cover; background-repeat: no-repeat;background-position: center;">
 										
@@ -27,7 +27,7 @@
 								</div>
 								<div class="entry-title">
 									<h2>
-										<a href="{{ url('catalog/article') }}/<?php echo $post['uri'] ?>">
+										<a href="{{ url('catalog/article') }}/<?php echo $post['uri'] ?>" class="tracking-btn" data-action="posts" data-id="<?php echo base64_encode($post['_id']) ?>">
 											<?php echo $post['title'] ?>
 										</a>
 									</h2>

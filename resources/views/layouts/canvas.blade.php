@@ -172,6 +172,6 @@
         <div id="gotoTop" class="icon-angle-up"></div>
 
         @yield('scripts')
-
+        <script type="text/javascript" src="{{ asset('canvas/js/custom.js') }}"></script>
     </body>
 </html>
